@@ -1,0 +1,46 @@
+name: Issue Report
+description: File an issue report.
+title: "[Issue]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "An issue happened!"
+    validations:
+      required: true
+  - type: textarea
+    id: version
+    attributes:
+      label: Version
+      description: What versions are you running?
+      placeholder: |
+        python version
+        other relevant software versions (`package.show_versions()`)
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: input
+    id: assignees
+    attributes:
+      label: Potential helpers
+      description: GitHub usernames of people who might help with this issue (comma-separated).
+      placeholder: username1, username2
+  - type: checkboxes
+    id: self-troubleshoot
+    attributes:
+      label: Self-troubleshooting confirmation
+      description: Please confirm you have tried to solve this issue yourself (e.g., checked model convergence, reviewed documentation, searched existing issues).
+      options:
+        - label: I have attempted to solve this issue myself and believe it requires further assistance.
+          required: true

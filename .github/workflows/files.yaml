@@ -1,0 +1,15 @@
+name: CI File Checks
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  file_checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for invalid files
+        run: |
+          python3 .github/workflows/files.py
