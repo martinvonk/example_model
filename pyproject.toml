@@ -3,14 +3,21 @@ build-backend = "setuptools.build_meta"
 requires = ["setuptools", "wheel"]
 
 [project]
-name = "PROJECT_NAME"
+name = "Example_Haamstede"
 version = "0.0.0"
 
-description = "PROJECT_DESCRIPTION"
+description = "Example model for the Haamstede area to show the ZLFLO"
 readme = "README.md"
-authors = [{ name = "YOUR NAME", email = "your.email@example.com" }]
-requires-python = ">=3.10.0"                                              # define python version
-dependencies = ["zlflodata @ git+https://github.com/ZLFLO/data.git@main"]
+authors = [
+    { name = "Martin Vonk", email = "m.vonk@artesia-water.nl" },
+    { name = "Ruben Caljé", email = "r.calje@artesia-water.nl" },
+]
+requires-python = ">=3.13.5"
+dependencies = [
+    "ipykernel>=7.0.0a2",
+    "nlmod>=0.10.0",
+    "zlflodata @ git+https://github.com/ZLFLO/data.git@main",
+]
 
 [project.optional-dependencies]
 dev = ["ruff", "pre-commit"]
